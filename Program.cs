@@ -6,7 +6,7 @@ namespace Fibonacci
     {
         static void Main(string[] args)
         {
-            int valor, valor1 = 0, valor2 = 1, valor3 = 0;
+            int valor, valor1 = 1, valor2 = 0, valor3 = 1;
             bool result;
             
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -21,10 +21,11 @@ namespace Fibonacci
             for (int finish = 0; finish < valor; finish++)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                valor1 = valor2 + valor3;
-                Console.WriteLine(valor1);
+
+                Console.WriteLine(valor2);
                 valor3 = valor2;
                 valor2 = valor1;
+                valor1 = valor2 + valor3;
                 Console.ResetColor();
             }
             if (valor < 2 || !result)
